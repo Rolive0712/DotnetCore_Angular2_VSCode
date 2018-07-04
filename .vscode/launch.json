@@ -7,14 +7,14 @@
         {
             "name": "Debug in Chrome",
     "configurations": [
-                ".NET Core Launch (console)",
-                "Launch Chrome"
+                "IE debug",
+                "Chrome Debug"
     ]
 }
     ],    
     "configurations": [
         {
-            "name": ".NET Core Launch (console)",
+            "name": "IE debug",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
@@ -47,7 +47,7 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome",
+            "name": "Chrome Debug",
             "url": "http://localhost:5000",
             "webRoot": "${workspaceRoot}/wwwroot",
             "sourceMaps": true,

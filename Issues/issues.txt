@@ -1,2 +1,3 @@
-IE debug and HMR update works fine
-Chrome does not work.
+IE server side debug and HMR update works fine
+Chrome HMR started working automatically. probably after making environment update on machine
+chrome server side debugging does not work

@@ -1,24 +1,13 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "compounds": [
+   
+   "version": "0.2.0",
+   "configurations": [
         {
-            "name": "Debug in Chrome",
-    "configurations": [
-                ".NET Core Launch (console)",
-                "Launch Chrome"
-    ]
-}
-    ],    
-    "configurations": [
-        {
-            "name": ".NET Core Launch (console)",
+            "name": ".NET Core Launch (web)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.0/DotnetCore_Angular2_VSCode.dll",
+            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.0/DotNetCoreAngular2.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
@@ -45,15 +34,10 @@
             }
         },
         {
-            "type": "chrome",
-            "request": "launch",
-            "name": "Launch Chrome",
-            "url": "http://localhost:5000",
-            "webRoot": "${workspaceRoot}/wwwroot",
-            "sourceMaps": true,
-            "sourceMapPathOverrides": {
-                "/Views": "${workspaceRoot}/Views"
-            }
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
         }
     ]
 }

@@ -31,9 +31,17 @@ namespace DotnetCore_Angular2_VSCode
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                
+                //WebpackDevMiddleware allows developer not to kill kestrel after making any client side changes. 
+                //just browser refresh picks up changes
+
                 app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
                 {
-                    HotModuleReplacement = true
+                    HotModuleReplacement = true, // no need to refresh if we enable HMR.
+
+                    //extremely important to add line below or else auto refresh for client side changes on browser does not work out.
+                    //this has to be added explicitly. does not come with command "dotnet new angular"
+                    HotModuleReplacementEndpoint = "/dist/__webpack_hmr"
                 });
             }
             else

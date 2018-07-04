@@ -47,3 +47,8 @@ then run "dotnet run"
 check https://stackoverflow.com/questions/42495655/how-to-debug-angular-with-vscode
 Angular CLI way of development creates angular 6 app. confirm this.
 
+** anytime webpack config or vendor files are modified, run commands below
+=> webpack --config webpack.config.vendor.js
+=> webpack
+=> dotnet watch run
+

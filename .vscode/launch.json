@@ -8,7 +8,7 @@
             "name": "Debug in Chrome",
     "configurations": [
                 "IE debug",
-                "Chrome Debug"
+                "Chrome Debug" 
     ]
 }
     ],    

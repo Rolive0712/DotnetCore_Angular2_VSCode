@@ -4,7 +4,7 @@ My First Dotnet Core Project using Angular 4 SPA javascript services
 *** Prerequisites to install
 1) Node.js and npm
 2) Visual Studio Code (comes with typescript compiler)
-3) .NET Core SDK 2.0+ (comes with ASP.NET Core  - formally known as ASP.NET 5)
+3) .NET Core SDK 2.0 (comes with ASP.NET Core  - formally known as ASP.NET 5)
 
 
 ** Once all installed,

@@ -1,0 +1,2 @@
+IE debug and HMR update works fine
+Chrome does not work.

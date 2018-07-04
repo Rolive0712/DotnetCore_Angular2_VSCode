@@ -41,6 +41,16 @@ check  "https://github.com/Microsoft/vsts-vscode/blob/master/TFVC_README.md#quic
 
 run command 'set ASPNETCORE_ENVIRONMENT=Development' after every new terminal launch as default is production.
 then run "dotnet run"
+to set at global level, check https://docs.microsoft.com/en-us/aspnet/core/fundamentals/environments?view=aspnetcore-2.1
+on windows 10,
+Click the Start orb.
+Click Control Panel.
+Click System and Security.
+Click System.
+In the left pane, click Advanced System Settings.
+If a UAC window opens, click Yes.
+The System Properties dialog box opens.
+Click the Advanced tab.
 
 
 ** for enabling chrome debugging (with Angular CLI)

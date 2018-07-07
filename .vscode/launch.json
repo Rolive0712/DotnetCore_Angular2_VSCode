@@ -5,19 +5,23 @@
     "version": "0.2.0",
     "compounds": [
         {
-            "name": "Debug in Chrome",
+            "name": "All Browser Debug Launch",
     "configurations": [
-                "IE debug",
-                "Chrome Debug" 
+                ".NET Core Launch (web)",
+                ".NET Core Launch - Chrome",
+                ".NET Core Launch - Firefox",
+                ".NET Core Launch - IE",
+                ".NET Core Attach"
     ]
 }
     ],    
     "configurations": [
         {
-            "name": "IE debug",
+            "name": ".NET Core Launch (web)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/bin/Debug/netcoreapp2.0/DotnetCore_Angular2_VSCode.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
@@ -45,15 +49,88 @@
             }
         },
         {
-            "type": "chrome",
+            "name": ".NET Core Launch - Chrome",
+            "type": "coreclr",
             "request": "launch",
-            "name": "Chrome Debug",
-            "url": "http://localhost:5000",
-            "webRoot": "${workspaceRoot}/wwwroot",
-            "sourceMaps": true,
-            "sourceMapPathOverrides": {
-                "/Views": "${workspaceRoot}/Views"
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.0/DotnetCore_Angular2_VSCode.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart",
+            "launchBrowser": {
+                "enabled": true,
+                "args": "${auto-detect-url}",
+                "windows": {
+                    "command": "cmd.exe",
+                    "args": "/C start \"\" \"C:/Program Files (x86)/Google/Chrome/Application/chrome.exe\" ${auto-detect-url}"
+                }
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
             }
+        },
+        {
+            "name": ".NET Core Launch - Firefox",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.0/DotnetCore_Angular2_VSCode.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart",
+            "launchBrowser": {
+                "enabled": true,
+                "args": "${auto-detect-url}",
+                "windows": {
+                    "command": "cmd.exe",
+                    "args": "/C start \"\" \"C:/Program Files/Mozilla Firefox/firefox.exe\" ${auto-detect-url}"
+                }
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": ".NET Core Launch - IE",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.0/DotnetCore_Angular2_VSCode.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart",
+            "launchBrowser": {
+                "enabled": true,
+                "args": "${auto-detect-url}",
+                "windows": {
+                    "command": "cmd.exe",
+                    "args": "/C start \"\" \"C:/Program Files/internet explorer/iexplore.exe\" ${auto-detect-url}"
+                }
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
         }
     ]
 }
